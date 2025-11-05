@@ -33,10 +33,6 @@ venv/
 *.tmp
 *.dat
 *.ai
-*.png
-*.txt
-*.csv
-*.pdf
 *.cpp
 *.nrn
 *_inc
@@ -49,22 +45,13 @@ venv/
 *.fd2
 *.tif
 
-
 # Compiled NEURON files
 x86_64/
 arm64/*
 *.o
 *.c
-
-
-# Data/output
-/results/
-!/results/**/*.py
-
-
-/figures/
-!/figures/**/*.py
 /deprecated
+
 /mod/deprecated/
 /exported_sweeps/*
 /MNTB_Model_Dann/
@@ -86,15 +73,3 @@ arm64/*
 /4x
 /Illustrator/*
 /Illustrator
-
-/mod/fit_final/optimization/arm64/
-/mod/fit_final/optimization/mod/arm64/
-/mod/fit_final/optimization/figures/
-/mod/fit_final/optimization/deprecated/
-/mod/fit_final/optimization/3D_and_bar_graphs/arm64/
-/mod/fit_final/optimization/3D_and_bar_graphs/mod/arm64/
-/mod/fit_final/optimization/in_progress
-
-/mc_project
-!/results/_last_simulations/**
-!/mod/fit_final/LICENSE.txt**
