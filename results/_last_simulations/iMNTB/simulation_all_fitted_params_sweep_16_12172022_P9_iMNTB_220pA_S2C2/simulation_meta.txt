@@ -1,0 +1,18 @@
+Experiement: all_fitted_params_sweep_16_12172022_P9_iMNTB_220pA_S2C2
+Stimulus Range: -0.1 to 0.34 nA
+Stim Duration: 300 ms
+Stim Delay: 210 ms
+Initial Vm: -75 mV
+gLeak: 4.60 nS
+gNa: 256.72 nS
+gKHT: 217.42 nS
+gKLT: 25.38 nS
+gIH: 13.54 nS
+gKA: 25.31 nS
+ELeak: -80.91 mV
+EK: -106.81 mV
+ENa: 62.77 mV
+cam: 85.04 mV
+kam: 0.04 mV
+cbm: 7.69 mV
+kbm: -0.03 mV

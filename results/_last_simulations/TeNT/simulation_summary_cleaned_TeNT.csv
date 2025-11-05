@@ -1,0 +1,6 @@
+Experiement,Stimulus Range,Stim Duration,Stim Delay,Initial Vm,gLeak,gNa,gKHT,gKLT,gIH,gKA,ELeak,EK,ENa,cam,kam,cbm,kbm,Folder,group
+all_fitted_params_sweep_12_03232022_P9_TeNT_140pA_S1C2,-0.1 to 0.34 nA,300 ms,210 ms,-75 mV,8.56,208.92,107.92,14.51,20.73,114.6,-70.0,-106.81 mV,62.77 mV,60.67,0.03,6.39,-0.04,simulation_all_fitted_params_sweep_12_03232022_P9_TeNT_140pA_S1C2,TeNT
+all_fitted_params_sweep_8_10142022_P9_TeNT_60pA_S1C1,-0.1 to 0.34 nA,300 ms,210 ms,-75 mV,4.62,118.41,188.1,3.91,10.38,112.37,-70.0,-106.81 mV,62.77 mV,60.88,0.03,5.67,-0.04,simulation_all_fitted_params_sweep_8_10142022_P9_TeNT_60pA_S1C1,TeNT
+all_fitted_params_sweep_11_02062024_P9_TeNT_120pA_S4C1,-0.1 to 0.34 nA,300 ms,210 ms,-75 mV,2.5,172.86,125.13,8.98,23.75,109.94,-70.0,-106.81 mV,62.77 mV,85.41,0.03,5.97,-0.05,simulation_all_fitted_params_sweep_11_02062024_P9_TeNT_120pA_S4C1,TeNT
+all_fitted_params_sweep_10_12172022_P9_TeNT_100pA_S2C4,-0.1 to 0.34 nA,300 ms,210 ms,-75 mV,8.85,210.53,128.04,6.08,2.18,126.67,-70.17,-106.81 mV,62.77 mV,76.56,0.04,8.22,-0.03,simulation_all_fitted_params_sweep_10_12172022_P9_TeNT_100pA_S2C4,TeNT
+all_fitted_params_sweep_22_12232024_P9_TeNT_120pA_S1C1,-0.1 to 0.34 nA,300 ms,210 ms,-75 mV,14.3,300.14,191.88,4.87,7.61,81.7,-72.91,-106.81 mV,62.77 mV,94.8,0.03,8.85,-0.05,simulation_all_fitted_params_sweep_22_12232024_P9_TeNT_120pA_S1C1,TeNT

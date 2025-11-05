@@ -1,0 +1,18 @@
+Experiement: avg_iMNTB_transposed
+Stimulus Range: -0.1 to 0.38 nA
+Stim Duration: 300 ms
+Stim Delay: 210 ms
+Initial Vm: -75 mV
+gLeak: 6.15 nS
+gNa: 225.19 nS
+gKHT: 228.21 nS
+gKLT: 33.33 nS
+gIH: 9.80 nS
+gKA: 46.47 nS
+ELeak: -76.01 mV
+EK: -106.81 mV
+ENa: 62.77 mV
+cam: 85.61 mV
+kam: 0.04 mV
+cbm: 6.98 mV
+kbm: -0.04 mV

@@ -1,0 +1,18 @@
+Experiement: avg_TeNT_transposed
+Stimulus Range: -0.1 to 0.38 nA
+Stim Duration: 300 ms
+Stim Delay: 210 ms
+Initial Vm: -75 mV
+gLeak: 9.21 nS
+gNa: 202.17 nS
+gKHT: 145.61 nS
+gKLT: 7.08 nS
+gIH: 12.93 nS
+gKA: 107.06 nS
+ELeak: -70.62 mV
+EK: -106.81 mV
+ENa: 62.77 mV
+cam: 75.66 mV
+kam: 0.03 mV
+cbm: 7.02 mV
+kbm: -0.04 mV

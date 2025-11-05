@@ -1,0 +1,18 @@
+Experiement: all_fitted_params_sweep_12_03232022_P9_TeNT_140pA_S1C2
+Stimulus Range: -0.1 to 0.34 nA
+Stim Duration: 300 ms
+Stim Delay: 210 ms
+Initial Vm: -75 mV
+gLeak: 8.56 nS
+gNa: 208.92 nS
+gKHT: 107.92 nS
+gKLT: 14.51 nS
+gIH: 20.73 nS
+gKA: 114.60 nS
+ELeak: -70.00 mV
+EK: -106.81 mV
+ENa: 62.77 mV
+cam: 60.67 mV
+kam: 0.03 mV
+cbm: 6.39 mV
+kbm: -0.04 mV
