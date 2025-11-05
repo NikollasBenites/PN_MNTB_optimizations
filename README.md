@@ -22,6 +22,8 @@ Simulation of the current clamp simulation:fit_simulation.py
 ####
 Plot voltage traces as you desire: plotting_exp_data_traces.py
 
+The results folder contains all the results for the paper and also some figures and csv files to check if the values of
+the optimization.
 
 ---
 ## 🛠 Setup Instructions
