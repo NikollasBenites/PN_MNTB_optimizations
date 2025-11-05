@@ -36,7 +36,7 @@ def fit_ap_tent(filename, stim_amp, param_file,batch_mode = False, expected_patt
     # === Create Output Folder ===
     file = filename.split(".")[0]
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = os.path.join(os.getcwd(),"..", "results","_latest_iMNTB_TeNT_fits","_last_round","test_mutation","TeNT", f"fit_AP_{file}_{timestamp}")
+    output_dir = os.path.join(os.getcwd(),"..", "results","AP_fits","TeNT", f"fit_AP_{file}")
     os.makedirs(output_dir, exist_ok=True)
 
     valid_patterns = ["phasic", "tonic", "silent", "non-phasic"]
@@ -72,10 +72,7 @@ def fit_ap_tent(filename, stim_amp, param_file,batch_mode = False, expected_patt
         plt.xlabel("Time (ms)")
         plt.ylabel("Membrane Potential (mV)")
         plt.show(block=False)
-        # === Compute sampling frequency from ms → Hz
-    # fs = 1000 / (t_exp[1] - t_exp[0])  # Correct fs in Hz
-    # V_exp = mFun.lowpass_filter(V_exp, cutoff=1000, fs=fs)
-    # print(f"✅ Applied low-pass filter at 1 kHz (fs = {fs:.1f} Hz)")
+
     # Define soma parameters
     relaxation = 200
     totalcap = 25  # Total membrane capacitance in pF for the cell (input capacitance)
@@ -188,8 +185,6 @@ def fit_ap_tent(filename, stim_amp, param_file,batch_mode = False, expected_patt
         else:
             return error
 
-
-    #@lru_cache(maxsize=None)
     def run_simulation(p: ParamSet, stim_dur=300, stim_delay=10):
         """
         Run simulation with 200 ms internal relaxation before stimulus.
@@ -235,10 +230,6 @@ def fit_ap_tent(filename, stim_amp, param_file,batch_mode = False, expected_patt
         return t, v
 
 
-    # def interpolate_simulation(t_neuron, v_neuron, t_exp):
-    #     interp_func = interp1d(t_neuron, v_neuron, kind='cubic', fill_value='extrapolate')
-    #     return interp_func(t_exp)
-
     def interpolate_simulation(t_neuron, v_neuron, t_exp):
         # Ensure numpy arrays
         t_neuron = np.asarray(t_neuron)
@@ -257,7 +248,6 @@ def fit_ap_tent(filename, stim_amp, param_file,batch_mode = False, expected_patt
         v_interp = spline(t_exp)
 
         return v_interp
-
 
     def penalty_terms(v_sim, dt=2e-5, expected_pattern = None):
         from scipy.signal import find_peaks
@@ -768,9 +758,7 @@ def fit_ap_tent(filename, stim_amp, param_file,batch_mode = False, expected_patt
         "cam": params_opt.cam, "kam": params_opt.kam, "cbm": params_opt.cbm, "kbm": params_opt.kbm
     }
 
-    pd.DataFrame([combined_results]).to_csv(os.path.join(script_dir, "..","results","_fit_results", f"all_fitted_params_{file}_{timestamp}.csv"), index=False)
-    pd.DataFrame([combined_results]).to_csv(os.path.join(script_dir, "..","results","_fit_results", f"all_fitted_params.csv"), index=False) #the last
-    # monitor_cache_size()
+    pd.DataFrame([combined_results]).to_csv(os.path.join(output_dir, f"all_fitted_params_{file}_{timestamp}.csv"), index=False)
 
     plt.figure(figsize=(10, 5))
     plt.plot(t_exp, V_exp, label='Experimental', linewidth=2)

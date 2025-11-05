@@ -5,7 +5,6 @@ Fit and optimize passive conductances (gKLT, gH, gLeak) and E_leak to experiment
 steady-state current-clamp data using explained sum of squares (ESS) minimization.
 
 Output:
-- best_fit_params.txt for legacy use
 - passive_params_<input_file>.txt (timestamped)
 - passive_summary_<input_file>.json
 - plots of VI curve and Rin fits
@@ -77,7 +76,7 @@ def fit_passive(filename):
 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(script_dir, "..", "data","fit_passive", "fit_passive",filename)
+    data_path = os.path.join(script_dir, "..", "data","fit_passive","TeNT",filename)
     experimental_data = pd.read_csv(data_path)
 
     vconverter = 1
@@ -224,18 +223,14 @@ def fit_passive(filename):
 
     # --- Save outputs
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = os.path.join(script_dir, "..", "figures", f"fit_passive_{file_base}_{timestamp}")
+    output_dir = os.path.join(script_dir, "..", "results", "_fit_passive_results","TeNT",f"fit_passive_{file_base}")
     os.makedirs(output_dir, exist_ok=True)
 
-    param_txt = os.path.join(script_dir, "..", "results", "_fit_results", f"passive_params_{file_base}_{timestamp}.txt")
+    param_txt = os.path.join(script_dir, "..", "results", "_fit_passive_results", "TeNT", f"passive_params_{file_base}.txt")
     with open(param_txt, "w") as f:
         f.write(f"{opt_leak},{opt_gklt},{opt_gh},{opt_erev},{opt_gkht},{opt_gna},{opt_gka}\n")
 
-    # legacy support
-    with open(os.path.join(script_dir, "..", "results", "_fit_results", "best_fit_params.txt"), "w") as f:
-        f.write(f"{opt_leak},{opt_gklt},{opt_gh},{opt_erev},{opt_gkht},{opt_gna},{opt_gka}\n")
-
-    # --- Input resistance
+     # --- Input resistance
     mask = (all_currents >= -0.020) & (all_currents <= 0.020)
     rin_exp = np.polyfit(all_currents[mask], all_steady_state_voltages[mask], 1)[0]
     rin_sim = np.polyfit(all_currents[mask], simulated_voltages_full[mask], 1)[0]

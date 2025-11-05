@@ -59,11 +59,6 @@ arm64/
 
 /OneDriveBully-master/*
 /OneDriveBully-master
-/data/ap_P9_iMNTB/
-!/data/ap_P9_iMNTB/**/*.py
-
-/data/ap_P9_TeNT/
-!/data/ap_P9_TeNT/**/*.py
 
 /data/dat/
 !/data/dat/**/*.py
