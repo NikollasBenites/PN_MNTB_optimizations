@@ -35,7 +35,7 @@ filenames = [
 
 # === Create Output Folder ===
 timestamp = datetime.datetime.now().strftime("%Y%m%d")
-output_dir = os.path.join(os.getcwd(),"..", "results","test", f"simulation_{filename}")
+output_dir = os.path.join(os.getcwd(),"..", "results","test","simulations", f"simulation_{filename}")
 os.makedirs(output_dir, exist_ok=True)
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

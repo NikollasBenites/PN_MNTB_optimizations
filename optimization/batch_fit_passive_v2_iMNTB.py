@@ -6,7 +6,7 @@ from fit_passive_v2_iMNTB import fit_passive
 # === Settings ===
 pattern = "iMNTB"  # Change this to filter files by group (e.g., "iMNTB", "WT", or "" for all)
 data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data","fit_passive",pattern))
-results_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "results", "_fit_passive_results",pattern))
+results_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "results", "test","passive_fits",pattern))
 
 # === Collect matching CSV files ===
 all_files = os.listdir(data_dir)

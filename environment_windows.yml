@@ -1,35 +1,47 @@
 name: neuron_env
 channels:
   - defaults
-  - https://repo.anaconda.com/pkgs/main
-  - https://repo.anaconda.com/pkgs/r
 dependencies:
-  - blas=1.0
-  - bottleneck=1.4.2
-  - matplotlib=3.10.0
-  - matplotlib-base=3.10.0
-  - numexpr=2.10.1
-  - openjpeg=2.5.2
-  - openssl=3.0.16
-  - pandas=2.2.3
-  - pillow=11.1.0
-  - pip=25.0
-  - python=3.10.16
-  - python-dateutil=2.9.0post0
-  - python-tzdata=2023.3
-  - pytz=2024.1
-  - scipy=1.15.1
-  - setuptools=72.1.0
-  - six=1.16.0
-  - sqlite=3.45.3
-  - tk=8.6.14
-  - tornado=6.4.2
-  - tzdata=2025a
-  - unicodedata2=15.1.0
-  - wheel=0.45.1
-  - xz=5.6.4
-  - zlib=1.2.13
-  - zstd=1.5.6
+  # Core
+  - python=3.10
+  - pip
+
+  # Numerical stack (all from conda, consistent builds)
+  - numpy=1.26.*
+  - scipy=1.15.*
+  - pandas=2.2.*
+  - numexpr=2.10.*
+  - bottleneck=1.4.*
+
+  # Plotting
+  - matplotlib=3.10.*
+  - pillow=11.1.*
+
+  # System libs / runtime
+  - openssl=3.0.*
+  - sqlite
+  - tk
+  - tornado
+  - tzdata
+  - unicodedata2
+  - xz
+  - zlib
+  - zstd
+
+  # Packaging tools
+  - pip=25.*
+  - setuptools
+  - wheel
+
+  # Optional: lock in MKL BLAS on Windows (speeds up numpy/scipy)
+  - mkl
+  - mkl-service
+
+  # If you need timezone helpers
+  - python-dateutil
+  - pytz
+  - python-tzdata
+
+  # (pip section empty on purpose — avoid pip for NumPy/SciPy on Windows)
   - pip:
       - find-libpython==0.4.0
-      - numpy==1.26.4

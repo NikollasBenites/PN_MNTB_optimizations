@@ -36,7 +36,7 @@ def fit_ap_imntb(filename, stim_amp, param_file, batch_mode = False, expected_pa
     # === Create Output Folder ===
     file = filename.split(".")[0]
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = os.path.join(os.getcwd(),"..", "results","AP_fits","iMNTB", f"fit_AP_{file}")
+    output_dir = os.path.join(os.getcwd(),"..", "results","test","AP_fits","iMNTB", f"fit_AP_{file}")
     os.makedirs(output_dir, exist_ok=True)
 
     valid_patterns = ["phasic", "tonic", "silent", "non-phasic"]

@@ -29,14 +29,15 @@ the optimization.
 ## 🛠 Setup Instructions
 
 ### 1. Clone the Repository
-To clone the repo is necessary that you have installed git on your computer.
+To clone the repo is necessary that you have installed git on your computer <https://github.com/git-guides/install-git>.
 ```bash
 git clone git@github.com:NikollasBenites/PN_MNTB_optimizations
 cd PN_MNTB_optimizations
 ```
 ### 2. Create the Conda Environment
 
-There are two envs files: one for mac and other for windows. Use the file that match YOUR_OS
+There are two envs files: one for mac and other for windows. Use the file that match YOUR_OS. Open a terminal on the
+directory the .yml files are.
 
 ``` bash
 conda env create -f environment_(YOUR_OS).yml

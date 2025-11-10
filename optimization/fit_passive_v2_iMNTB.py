@@ -223,7 +223,7 @@ def fit_passive(filename):
 
     # --- Save outputs
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = os.path.join(script_dir, "..", "results", "_fit_passive_results","iMNTB",f"fit_passive_{file_base}")
+    output_dir = os.path.join(script_dir, "..", "results", "test","passive_fits","iMNTB",f"fit_passive_{file_base}")
     os.makedirs(output_dir, exist_ok=True)
 
     param_txt = os.path.join(script_dir, "..", "results", "_fit_passive_results","iMNTB", f"passive_params_{file_base}.txt")

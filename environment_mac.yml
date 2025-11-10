@@ -1,62 +1,49 @@
 name: neuron_env
 channels:
-  - defaults
-  - https://repo.anaconda.com/pkgs/main
-  - https://repo.anaconda.com/pkgs/r
+  - conda-forge
 dependencies:
-  - blas=1.0
-  - bottleneck=1.4.2
-  - brotli-python=1.0.9
-  - bzip2=1.0.8
-  - ca-certificates=2025.2.25
-  - contourpy=1.3.1
-  - cycler=0.11.0
-  - fonttools=4.55.3
-  - freetype=2.12.1
-  - jpeg=9e
-  - kiwisolver=1.4.8
-  - lcms2=2.16
-  - lerc=4.0.0
-  - libcxx=14.0.6
-  - libdeflate=1.22
-  - libffi=3.4.4
-  - libgfortran=5.0.0
-  - libgfortran5=11.3.0
-  - libopenblas=0.3.21
-  - libpng=1.6.39
-  - libtiff=4.5.1
-  - libwebp-base=1.3.2
-  - llvm-openmp=14.0.6
-  - lz4-c=1.9.4
-  - matplotlib=3.10.0
-  - matplotlib-base=3.10.0
-  - ncurses=6.4
-  - numexpr=2.10.1
-  - openjpeg=2.5.2
-  - openssl=3.0.16
-  - packaging=24.2
-  - pandas=2.2.3
-  - pillow=11.1.0
-  - pip=25.0
-  - pyparsing=3.2.0
-  - python=3.10.16
-  - python-dateutil=2.9.0post0
-  - python-tzdata=2023.3
-  - pytz=2024.1
-  - readline=8.2
-  - scipy=1.15.1
-  - setuptools=72.1.0
-  - six=1.16.0
-  - sqlite=3.45.3
-  - tk=8.6.14
-  - tornado=6.4.2
-  - tzdata=2025a
-  - unicodedata2=15.1.0
-  - wheel=0.45.1
-  - xz=5.6.4
-  - zlib=1.2.13
-  - zstd=1.5.6
+  # --- Core ---
+  - python=3.10
+  - pip
+
+  # --- Numerical / SciPy stack (OpenBLAS to be universal on macOS) ---
+  - libblas=*=*openblas
+  - numpy>=1.26
+  - scipy>=1.11
+  - pandas>=2.2
+  - scikit-learn>=1.4
+  - statsmodels>=0.14
+  - numexpr
+  - joblib
+  - threadpoolctl
+
+  # --- Plotting / Viz ---
+  - matplotlib>=3.8
+  - seaborn>=0.13
+  - pillow
+
+  # --- Timezones / dates ---
+  - tzdata
+  - python-dateutil
+
+  # --- Optional useful tools (safe to keep) ---
+  - h5py
+  - patsy
+  - psutil
+  - ipykernel
+  - ipython
+
+  # --- Install these from pip to avoid conda conflicts ---
   - pip:
-      - find-libpython==0.4.0
       - neuron==8.2.6
-      - numpy==1.26.4
+      - bluepyopt==1.14.18
+      - efel==5.7.16
+      - deap==1.4.2
+      - scoop==0.7.2.0
+      - neo==0.14.0
+      - quantities==0.16.1
+      - pynwb==3.0.0
+      - hdmf==4.0.0
+      - load-heka-python==1.2.1.dev2+g9e5e997
+      - ipyparallel==9.0.1
+      - tqdm
