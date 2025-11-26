@@ -4,7 +4,7 @@ This repository contains a NEURON-based simulation of principal neurons (PN) in 
 Medial Nucleus of the Trapezoid Body (MNTB), developed for understanding intrinsic properties 
 and responses after blocking the pre-sensory spontaneous activity (psSA). The model is built using Python and `.mod` files.
 The directory tree is:
-
+```
 PN_MNTB_modeling/
 ├── CSV/
 │
@@ -22,7 +22,7 @@ PN_MNTB_modeling/
 ├── environment_mac.yml
 │
 └── .gitignore
-
+```
 The optimizers used from SciPy library were differential_evolution and minimize. The CSV folder contains the averaged
 params from iMNTB and TeNT cells (avg_iMNTB_transposed.csv & avg_TeNT_transposed.csv) and also the last params used
 on the simulation for each cell. The data folder contains action potential sweeps used to be optimized and fitted. Also
@@ -35,7 +35,26 @@ Essential functions: MNTB_PN_myFunctions.py
 ####
 Steady-state fitting single files: ```fit_passive_v2_TeNT.py``` & ```fit_passive_v2_iMNTB.py```
 
+To use those, you need to run the code from the terminal inside the optimization folder:
+```
+python fit_passive_tent.py --data YOUR_DESIRED_FILE.cvs
+``` 
+```
+python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs
+``` 
+
+The csv files are in ~/PN_MNTB_modeling/data/fit_passive/iMNTB AND ~/TeNT.
+Each fitting last about ```2-5 minutes```.
+After fitting, they could be found at ~/PN_MNTB_modeling/results/test/passive_fits in each respective folder
+
 Steady-state fitting in a batch: ```batch_fit_passive_v2_TeNT.py``` & ```batch_fit_passive_v2_iMNTB.py```
+
+RECOMMENDED TO USE.
+Those files work calling the function previously described and fitting all the files proposed. You just need to run the 
+script. All the files will be fitted and save at ~/PN_MNTB_modeling/results/test/passive_fits separately by folders.
+The script last about ```20-30 minutes```.
+A csv file summary will be generated.
+
 ####
 AP fitting files: ```fit_AP_v2_iMNTB.py``` & ```fit_AP_v2_TeNT.py```
 ####
