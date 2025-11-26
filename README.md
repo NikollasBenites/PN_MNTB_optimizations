@@ -155,8 +155,10 @@ the simulation if it is necessary.
 
 ---
 
-The ``results`` folder contains all the results for the paper and also some figures and csv files to check if the values of
+The ``results`` folder contains all the results for the paper and also some figures and csv files to check the values of
 the optimization.
+
+The output tests are in ```~/PN_MNTB_modeling/results/test```: AP fits, passive fits, and simulations fits.
 
 ---
 ## 🛠 Setup Instructions
