@@ -74,6 +74,7 @@ After fitting, they could be found at ~/PN_MNTB_modeling/results/test/passive_fi
 
 #### AP fitting files: 
 ```fit_AP_v2_iMNTB.py```
+
 ```fit_AP_v2_TeNT.py```
 
 The script open the prior fitting files derived from fit_passive scripts and optimizes the conductance:
