@@ -1,7 +1,7 @@
 import os
 import json
 import pandas as pd
-from fit_passive_v2_iMNTB import fit_passive
+from fit_passive_v2_iMNTB import fit_passive_imntb
 
 # === Settings ===
 pattern = "iMNTB"
