@@ -4,7 +4,7 @@ import pandas as pd
 from fit_passive_v2_TeNT import fit_passive
 
 # === Settings ===
-pattern = "TeNT"  # Change this to filter files by group (e.g., "iMNTB", "WT", or "" for all)
+pattern = "TeNT"
 data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data","fit_passive",pattern))
 results_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "results", "test","passive_fits",pattern))
 
