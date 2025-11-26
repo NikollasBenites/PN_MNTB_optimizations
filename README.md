@@ -90,11 +90,11 @@ also point-by-point voltage comparison. Each AP fit could be finish in several m
 computer.
 ```(30 minutes to 24-72hr)```
 
-#### ✔ Point-by-point voltage comparison
+### ✔ Point-by-point voltage comparison
 
 MSE between experimental and simulated AP, but only in the AP window.
 
-#### ✔ Feature matching
+### ✔ Feature matching
 
 Differences in:
 
@@ -113,11 +113,11 @@ AHP
 resting potential
 Weighted by biological importance.
 
-#### ✔ Temporal alignment
+### ✔ Temporal alignment
 
 Difference in peak timing → big penalty.
 
-#### ✔ Firing-pattern correctness
+### ✔ Firing-pattern correctness
 
 Ensures simulated neuron fires:
 
@@ -125,7 +125,7 @@ Ensures simulated neuron fires:
 
 adds penalties if spike count is wrong
 
-#### ✔ Physiological constraints
+### ✔ Physiological constraints
 
 Penalties for:
 
@@ -137,12 +137,17 @@ too many spikes
 
 unstable resting potential
 
-#### ✔ Final refinement loop
+### ✔ Final refinement loop
 
 Run multiple cycles of differential_evolution inside shrinking local bounds.
 
-#### Simulation of the current clamp simulation: 
+## Simulation of the current clamp simulation: 
 ```fit_simulation.py```
+
+The filenames are in the script, on the first session. It's necessary to type the name inside ```filename``` variable (line 18).
+All the filenames names are in the list ```filenames``` (line 19).
+This script is used to double-check if the passive fit and ap fit worked properly and also to fine-tuning manually 
+the simulation if it is necessary.
 
 #### Plot voltage traces as you desire: 
 
