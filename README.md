@@ -50,7 +50,7 @@ Steady-state fitting in a batch:
 
 RECOMMENDED TO USE.
 Those files work calling the function described bellow and fitting all the files proposed. You just need to run the 
-script. All the files will be fitted and save at ~/PN_MNTB_modeling/results/test/passive_fits separated by folders.
+script. All the files will be fitted and save at ```~/PN_MNTB_modeling/results/test/passive_fits``` separated by folders.
 The script last about ```20-30 minutes```.
 A csv file summary will be generated. The mechanisms optimized on this stage are:
 ``` gKLT, gH, ELeak, gLeak ```
