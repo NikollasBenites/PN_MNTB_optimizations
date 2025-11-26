@@ -68,9 +68,9 @@ To use those, you need to run the code from the terminal inside the optimization
 
 ```python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs```
 
-The csv files are in ~/PN_MNTB_modeling/data/fit_passive/iMNTB AND ~/TeNT.
+The csv files are in ```~/PN_MNTB_modeling/data/fit_passive/iMNTB``` AND ```~/TeNT```.
 Each fitting last about ```2-5 minutes```.
-After fitting, they could be found at ~/PN_MNTB_modeling/results/test/passive_fits in each respective folder
+After fitting, they could be found at `````~/PN_MNTB_modeling/results/test/passive_fits````` in each respective folder
 
 #### AP fitting files (FIT SECOND STAGE): 
 
