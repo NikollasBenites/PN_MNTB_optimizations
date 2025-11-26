@@ -33,7 +33,7 @@ of simulated 2500 neurons with slightly changes in conductance values. Also cont
 optimized values including the stats. The optimization folder contains all the core codes for the paper: 
 
 ---
-#### PN file: 
+## PN file: 
 
 ```MNTB_PN_fit.py.```
 
@@ -41,7 +41,7 @@ Essential functions:
 
 ```MNTB_PN_myFunctions.py```
 
-#### Steady-state fitting (FIT FIRST STAGE): 
+## Steady-state fitting (FIT FIRST STAGE): 
 Steady-state fitting in a batch: 
 
 ```batch_fit_passive_v2_TeNT.py``` 
@@ -70,9 +70,9 @@ To use those, you need to run the code from the terminal inside the optimization
 
 The csv files are in ```~/PN_MNTB_modeling/data/fit_passive/iMNTB``` AND ```~/TeNT```.
 Each fitting last about ```2-5 minutes```.
-After fitting, they could be found at `````~/PN_MNTB_modeling/results/test/passive_fits````` in each respective folder
+After fitting, they could be found at ```~/PN_MNTB_modeling/results/test/passive_fits``` in each respective folder
 
-#### AP fitting files (FIT SECOND STAGE): 
+## AP fitting files (FIT SECOND STAGE): 
 
 ```fit_AP_v2_iMNTB.py```
 
