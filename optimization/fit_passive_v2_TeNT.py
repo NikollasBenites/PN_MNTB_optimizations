@@ -35,7 +35,7 @@ def nstomho(x, somaarea):
     return (1e-9 * x / somaarea)  # Convert nS to mho/cm²
 
 
-def fit_passive(filename):
+def fit_passive_tent(filename):
     start_time = time.time()
 
     # --- Load experimental data
