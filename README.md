@@ -57,6 +57,61 @@ A csv file summary will be generated.
 
 ####
 AP fitting files: ```fit_AP_v2_iMNTB.py``` & ```fit_AP_v2_TeNT.py```
+
+Those files fit the action potentials traces using a mixed approach. The function extract features from the trace and 
+also point-by-point voltage comparison. 
+
+#### ✔ Point-by-point voltage comparison
+
+MSE between experimental and simulated AP, but only in the AP window.
+
+#### ✔ Feature matching
+
+Differences in:
+
+latency
+
+AP amplitude
+
+peak
+
+half-width
+
+threshold
+
+AHP
+
+resting potential
+Weighted by biological importance.
+
+#### ✔ Temporal alignment
+
+Difference in peak timing → big penalty.
+
+#### ✔ Firing-pattern correctness
+
+Ensures simulated neuron fires:
+
+“phasic” vs “tonic” at +20 pA
+
+adds penalties if spike count is wrong
+
+#### ✔ Physiological constraints
+
+Penalties for:
+
+unrealistic RMP
+
+bad AP peak
+
+too many spikes
+
+unstable resting potential
+
+#### ✔ Final refinement loop
+
+Run multiple cycles of differential_evolution inside shrinking local bounds.
+
 ####
 Simulation of the current clamp simulation: ```fit_simulation.py```
 ####
