@@ -32,21 +32,19 @@ of simulated 2500 neurons with slightly changes in conductance values. Also cont
 optimized values including the stats. The optimization folder contains all the core codes for the paper: 
 ---
 #### PN file: 
-```
-MNTB_PN_fit.py.
-```
+
+```MNTB_PN_fit.py.```
+
 Essential functions: 
-```
-MNTB_PN_myFunctions.py
-```
+
+```MNTB_PN_myFunctions.py```
+
 #### Steady-state fitting (FIT FIRST STAGE): 
 Steady-state fitting in a batch: 
-```
-batch_fit_passive_v2_TeNT.py
-``` 
-```
-batch_fit_passive_v2_iMNTB.py
-```
+
+```batch_fit_passive_v2_TeNT.py``` 
+
+```batch_fit_passive_v2_iMNTB.py```
 RECOMMENDED TO USE.
 Those files work calling the function described bellow and fitting all the files proposed. You just need to run the 
 script. All the files will be fitted and save at ~/PN_MNTB_modeling/results/test/passive_fits separated by folders.
@@ -55,33 +53,29 @@ A csv file summary will be generated. The mechanisms optimized on this stage are
 ``` gKLT, gH, ELeak, gLeak ```
 
 To fit one value at time, use:
-```
-fit_passive_v2_TeNT.py
-```  
-```
-fit_passive_v2_iMNTB.py
-```
+```fit_passive_v2_TeNT.py```  
+
+```fit_passive_v2_iMNTB.py```
+
 To use those, you need to run the code from the terminal inside the optimization folder:
-```
-python fit_passive_tent.py --data YOUR_DESIRED_FILE.cvs
-``` 
-```
-python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs
-```
+```python fit_passive_tent.py --data YOUR_DESIRED_FILE.cvs``` 
+
+```python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs```
+
 The csv files are in ~/PN_MNTB_modeling/data/fit_passive/iMNTB AND ~/TeNT.
 Each fitting last about ```2-5 minutes```.
 After fitting, they could be found at ~/PN_MNTB_modeling/results/test/passive_fits in each respective folder
 
-#### AP fitting files: 
+#### AP fitting files (FIT SECOND STAGE): 
 ```fit_AP_v2_iMNTB.py```
 
 ```fit_AP_v2_TeNT.py```
 
 The script open the prior fitting files derived from fit_passive scripts and optimizes the conductance:
-```
-gNa, gKHT, gKA
-```
-A small
+
+```gNa, gKHT, gKA```
+
+To improving fitting, a small variation is set up on the passive conductance.
 Those files fit the action potentials traces using a mixed approach. The function extract features from the trace and 
 also point-by-point voltage comparison. 
 
@@ -136,12 +130,12 @@ unstable resting potential
 
 Run multiple cycles of differential_evolution inside shrinking local bounds.
 
+#### Simulation of the current clamp simulation: 
+```fit_simulation.py```
 
-####
-Simulation of the current clamp simulation: ```fit_simulation.py```
-####
-Plot voltage traces as you desire: ```plotting_exp_data_traces.py```
-
+#### Plot voltage traces as you desire: 
+```plotting_exp_data_traces.py```
+---
 The results folder contains all the results for the paper and also some figures and csv files to check if the values of
 the optimization.
 
