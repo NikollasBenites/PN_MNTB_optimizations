@@ -53,14 +53,17 @@ Those files work calling the function described bellow and fitting all the files
 script. All the files will be fitted and save at ```~/PN_MNTB_modeling/results/test/passive_fits``` separated by folders.
 The script last about ```20-30 minutes```.
 A csv file summary will be generated. The mechanisms optimized on this stage are:
+
 ``` gKLT, gH, ELeak, gLeak ```
 
 To fit one value at time, use:
+
 ```fit_passive_v2_TeNT.py```  
 
 ```fit_passive_v2_iMNTB.py```
 
 To use those, you need to run the code from the terminal inside the optimization folder:
+
 ```python fit_passive_tent.py --data YOUR_DESIRED_FILE.cvs``` 
 
 ```python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs```
@@ -70,6 +73,7 @@ Each fitting last about ```2-5 minutes```.
 After fitting, they could be found at ~/PN_MNTB_modeling/results/test/passive_fits in each respective folder
 
 #### AP fitting files (FIT SECOND STAGE): 
+
 ```fit_AP_v2_iMNTB.py```
 
 ```fit_AP_v2_TeNT.py```
