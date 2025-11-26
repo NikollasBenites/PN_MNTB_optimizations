@@ -69,7 +69,9 @@ To use those, you need to run the code from the terminal inside the optimization
 ```python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs```
 
 The csv files are in ```~/PN_MNTB_modeling/data/fit_passive/iMNTB``` AND ```~/TeNT```.
+
 Each fitting last about ```2-5 minutes```.
+
 After fitting, they could be found at ```~/PN_MNTB_modeling/results/test/passive_fits``` in each respective folder
 
 ## AP fitting files (FIT SECOND STAGE): 
@@ -84,7 +86,9 @@ The script open the prior fitting files derived from fit_passive scripts and opt
 
 To improving fitting, a small variation is set up on the passive conductance.
 Those files fit the action potentials traces using a mixed approach. The function extract features from the trace and 
-also point-by-point voltage comparison. 
+also point-by-point voltage comparison. Each AP fit could be finish in several minutes to several hours, regarding the 
+computer.
+```(30 minutes to 24-72hr)```
 
 #### ✔ Point-by-point voltage comparison
 
@@ -185,33 +189,6 @@ nrnivmodl mod/
 ```
 This will generate the arm64/ folder with compiled special (in Mac).
 In Windows OS you will generate a file nrnmech.dll in the Root.
-
-#
-
-# 👥 Collaboration Workflow
-🧪 Recommended Git Practice
-## Before working
-```bash
-git pull origin main
-```
-## After making changes
-```bash
-git add .
-git commit -m "Describe your change"
-git push origin main
-```
-Use branches for feature development or testing:
-```bash
-git checkout -b feature/new-analysis
-```
-
-📦 Reproducing the Environment
-If the environment ever changes:
-``` bash
-conda env export --no-builds | grep -v "prefix:" > environment.yml
-git commit -am "Update environment with new packages"
-git push
-```
 
 # 👤 Code adapted by
 Nikollas Benites, University of South Florida
