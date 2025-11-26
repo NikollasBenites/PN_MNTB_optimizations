@@ -188,7 +188,7 @@ The detailed documentation and how to install to the version used is found at
 https://nrn.readthedocs.io/en/8.2.6/install/install.html
 
 Make sure you're in the root project directory (Mac and Windows) using Terminal. After you clone the repo, the mod
-folders are on <~/optimization/mod> and <~/optimization/3D_and_bar_graphs/mod>. Open a Terminal from those folders and 
+folders are on ```~/optimization/mod``` and ```~/optimization/3D_and_bar_graphs/mod```. Open a Terminal from those folders and 
 use the command bellow on the Terminal. 
 
 ```bash
