@@ -1,5 +1,5 @@
 """
-fit_passive.py
+fit_passive_tent.py
 
 Fit and optimize passive conductances (gKLT, gH, gLeak) and E_leak to experimental
 steady-state current-clamp data using explained sum of squares (ESS) minimization.

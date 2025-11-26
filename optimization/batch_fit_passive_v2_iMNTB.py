@@ -19,7 +19,7 @@ summary_paths = []
 for fname in csv_files:
     try:
         print(f"\n🔧 Fitting: {fname}")
-        passive_params, output_dir = fit_passive(fname)
+        passive_params, output_dir = fit_passive_imntb(fname)
         print(f"✅ Done: saved to {output_dir}")
 
         # Find summary file

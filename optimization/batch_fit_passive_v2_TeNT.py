@@ -1,7 +1,7 @@
 import os
 import json
 import pandas as pd
-from fit_passive_v2_TeNT import fit_passive
+from fit_passive_v2_TeNT import fit_passive_tent
 
 # === Settings ===
 pattern = "TeNT"
