@@ -23,6 +23,7 @@ PN_MNTB_modeling/
 │
 └── .gitignore
 ```
+---
 The optimizers used from SciPy library were differential_evolution and minimize. The CSV folder contains the averaged
 params from iMNTB and TeNT cells (avg_iMNTB_transposed.csv & avg_TeNT_transposed.csv) and also the last params used
 on the simulation for each cell. The data folder contains action potential sweeps used to be optimized and fitted. Also
@@ -42,7 +43,7 @@ python fit_passive_tent.py --data YOUR_DESIRED_FILE.cvs
 ```
 python fit_passive_imntb.py --data YOUR_DESIRED_FILE.cvs
 ``` 
-
+---
 The csv files are in ~/PN_MNTB_modeling/data/fit_passive/iMNTB AND ~/TeNT.
 Each fitting last about ```2-5 minutes```.
 After fitting, they could be found at ~/PN_MNTB_modeling/results/test/passive_fits in each respective folder
