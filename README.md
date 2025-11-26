@@ -184,7 +184,7 @@ conda activate neuron_env
 FOR WINDOWS USERS IS NECESSARY TO INSTALL NEURON DIRECTLY FROM THE SOURCE. 
 Several updates occurred on NEURON simulation environment regarding the API. We strongly recommend to use the specific 
 version because the recent version (NEURON 9.0) was not tested.
-The detailed documentation and how to install to the version used is found at 
+The detailed documentation and how to install the version used is found at 
 https://nrn.readthedocs.io/en/8.2.6/install/install.html
 
 Make sure you're in the root project directory (Mac and Windows) using Terminal. After you clone the repo, the mod
