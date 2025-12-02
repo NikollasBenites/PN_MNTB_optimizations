@@ -85,9 +85,9 @@ The script open the prior fitting files derived from fit_passive scripts and opt
 ```gNa, gKHT, gKA```
 
 To improving fitting, a small variation is set up on the passive conductance.
-Those files fit the action potentials traces using a mixed approach. The function extract features from the trace and 
-also point-by-point voltage comparison. Each AP fit could be finish in several minutes to several hours, regarding the 
-computer.
+Those files fit the action potentials traces using a mixed approach. The function extract features from the experimental 
+trace and also point-by-point voltage comparison. Each AP fit could be finished in several minutes to several hours, 
+regarding the computer.
 ```(30 minutes to 24-72hr)```
 
 ### ✔ Point-by-point voltage comparison
@@ -158,7 +158,7 @@ the simulation if it is necessary.
 The ``results`` folder contains all the results for the paper and also some figures and csv files to check the values of
 the optimization.
 
-The output tests are in ```~/PN_MNTB_modeling/results/test```: AP fits, passive fits, and simulations fits.
+The output tests will in ```~/PN_MNTB_modeling/results/test```: ```AP_fits```, ```passive_fits```, and ```simulations```.
 
 ---
 ## 🛠 Setup Instructions
