@@ -172,11 +172,13 @@ cd PN_MNTB_optimizations
 ### 2. Create the Conda Environment
 
 There are two envs files: one for mac and other for windows. Use the file that match YOUR_OS. Open a terminal on the
-directory the .yml files are. We tested the simulations exhaustively on MacOS. But, we also tested on Windows.
+directory the .yml files are. We tested the simulations exhaustively on MacOS. But, we also tested on Windows. We also 
+use PyCharm as our IDE.
 
 ``` bash
-conda env create -f environment_(YOUR_OS).yml
-conda activate neuron_env
+conda env create -f environment_mac.yml
+conda env create -f environment_windows.yml
+conda activate neuron_env_test_2
 ```
 
 #### MAKE SURE YOU HAVE CONDA INSTALLED AND YOUR INTERPRETER IS SET AS neuro_env
