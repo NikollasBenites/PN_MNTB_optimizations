@@ -36,7 +36,6 @@ dependencies:
   # --- Install these from pip to avoid conda conflicts ---
   - pip:
       - neuron==8.2.6
-      - bluepyopt==1.14.18
       - efel==5.7.16
       - deap==1.4.2
       - scoop==0.7.2.0
@@ -44,6 +43,5 @@ dependencies:
       - quantities==0.16.1
       - pynwb==3.0.0
       - hdmf==4.0.0
-      - load-heka-python==1.2.1.dev2+g9e5e997
       - ipyparallel==9.0.1
       - tqdm
