@@ -173,12 +173,17 @@ cd PN_MNTB_optimizations
 
 There are two envs files: one for mac and other for windows. Use the file that match YOUR_OS. Open a terminal on the
 directory the .yml files are. We tested the simulations exhaustively on MacOS. But, we also tested on Windows.
-If anything don't work, you can contact us anytime.
 
 ``` bash
 conda env create -f environment_(YOUR_OS).yml
 conda activate neuron_env
 ```
+
+#### MAKE SURE YOU HAVE CONDA INSTALLED AND YOUR INTERPRETER IS SET AS neuro_env
+
+If anything don't work, you can contact us anytime.
+
+
 ### 3. Compile NEURON (8.2.6) Mechanisms
 
 FOR WINDOWS USERS IS NECESSARY TO INSTALL NEURON DIRECTLY FROM THE SOURCE. 
