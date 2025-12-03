@@ -24,14 +24,67 @@ PN_MNTB_modeling/
 └── .gitignore
 ```
 ---
+## 🛠 Setup Instructions
 
-The optimizers used from SciPy library were differential_evolution and minimize. The CSV folder contains the averaged
-params from iMNTB and TeNT cells (avg_iMNTB_transposed.csv & avg_TeNT_transposed.csv) and also the last params used
-on the simulation for each cell. The data folder contains action potential sweeps used to be optimized and fitted. Also
-contains the VI used to fit the "passive" conductance. The figures folder contains the 3D graphs showing the behavior 
-of simulated 2500 neurons with slightly changes in conductance values. Also contains the bar plots comparing the 
-optimized values including the stats. The optimization folder contains all the core codes for the paper: 
+### 1. Clone the Repository
+To clone the repo is necessary that you have installed git on your computer <https://github.com/git-guides/install-git>.
+Your directory could be ```PN_MNTB_modeling``` but you can use the name you want. Just double-check your working
+directory.
 
+```bash
+git clone git@github.com:NikollasBenites/PN_MNTB_optimizations
+cd PN_MNTB_modeling
+```
+### 2. Create the Conda Environment
+
+There are two envs files: one for mac and other for windows. Use the file that match your OS. Open a terminal on the
+directory the .yml files are. We tested the simulations exhaustively on MacOS. But, we also tested on Windows. We used 
+PyCharm as our IDE.
+
+``` bash
+conda env create -f environment_mac.yml
+conda env create -f environment_windows.yml
+conda activate neuron_env
+```
+
+#### MAKE SURE YOU HAVE CONDA INSTALLED AND YOUR INTERPRETER IS SET AS neuro_env
+
+If anything don't work, you can contact us anytime.
+
+### 3. Compile NEURON (8.2.6) Mechanisms
+
+FOR WINDOWS USERS IS NECESSARY TO INSTALL NEURON DIRECTLY FROM THE SOURCE. 
+Several updates occurred on NEURON simulation environment regarding the API. We strongly recommend to use the specific 
+version because the recent version (NEURON 9.0) was not tested.
+The detailed documentation and how to install the version used is found at 
+https://nrn.readthedocs.io/en/8.2.6/install/install.html
+
+Make sure you're in the root project directory (Mac and Windows) using Terminal. After you clone the repo, the mod
+folders are on ```~/optimization/mod``` and ```~/optimization/3D_and_bar_graphs/mod```. Open a Terminal from those folders and 
+use the command bellow on the Terminal. 
+
+```bash
+nrnivmodl mod/
+```
+This will generate the arm64/ folder with compiled special (in Mac).
+In Windows OS you will generate a file nrnmech.dll in the Root.
+
+
+---
+
+The optimizers used from SciPy library were ```differential_evolution``` and ```minimize```. You can find the 
+documentation on:
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html
+
+The CSV folder contains the averaged params from iMNTB and TeNT cells (avg_iMNTB_transposed.csv & avg_TeNT_transposed.csv) 
+and also the last params used on the simulation for each cell. The data folder contains action potential sweeps used to be 
+optimized and fitted. Also contains the VI used to fit the "passive" conductance. The figures folder contains the 3D graphs 
+showing the behavior of simulated 2500 neurons with slightly changes in conductance values. Also contains the bar plots 
+comparing the optimized values including the stats. 
+---
+# The optimization folder contains all the core codes for the paper: 
+---
 ---
 ## PN file: 
 
@@ -155,54 +208,11 @@ the simulation if it is necessary.
 
 ---
 
-The ``results`` folder contains all the results for the paper and also some figures and csv files to check the values of
+The ``results`` folder contains all the last results for the paper and also some figures and csv files to check the values of
 the optimization.
 
-The output tests will in ```~/PN_MNTB_modeling/results/test```: ```AP_fits```, ```passive_fits```, and ```simulations```.
+The output tests will be in ```~/PN_MNTB_modeling/results/test```: ```AP_fits```, ```passive_fits```, and ```simulations```.
 
----
-## 🛠 Setup Instructions
-
-### 1. Clone the Repository
-To clone the repo is necessary that you have installed git on your computer <https://github.com/git-guides/install-git>.
-```bash
-git clone git@github.com:NikollasBenites/PN_MNTB_optimizations
-cd PN_MNTB_optimizations
-```
-### 2. Create the Conda Environment
-
-There are two envs files: one for mac and other for windows. Use the file that match YOUR_OS. Open a terminal on the
-directory the .yml files are. We tested the simulations exhaustively on MacOS. But, we also tested on Windows. We also 
-use PyCharm as our IDE.
-
-``` bash
-conda env create -f environment_mac.yml
-conda env create -f environment_windows.yml
-conda activate neuron_env_test_2
-```
-
-#### MAKE SURE YOU HAVE CONDA INSTALLED AND YOUR INTERPRETER IS SET AS neuro_env
-
-If anything don't work, you can contact us anytime.
-
-
-### 3. Compile NEURON (8.2.6) Mechanisms
-
-FOR WINDOWS USERS IS NECESSARY TO INSTALL NEURON DIRECTLY FROM THE SOURCE. 
-Several updates occurred on NEURON simulation environment regarding the API. We strongly recommend to use the specific 
-version because the recent version (NEURON 9.0) was not tested.
-The detailed documentation and how to install the version used is found at 
-https://nrn.readthedocs.io/en/8.2.6/install/install.html
-
-Make sure you're in the root project directory (Mac and Windows) using Terminal. After you clone the repo, the mod
-folders are on ```~/optimization/mod``` and ```~/optimization/3D_and_bar_graphs/mod```. Open a Terminal from those folders and 
-use the command bellow on the Terminal. 
-
-```bash
-nrnivmodl mod/
-```
-This will generate the arm64/ folder with compiled special (in Mac).
-In Windows OS you will generate a file nrnmech.dll in the Root.
 
 # 👤 Code adapted by
 Nikollas Benites, University of South Florida
