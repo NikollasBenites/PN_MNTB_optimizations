@@ -80,6 +80,10 @@ jobs:
             echo "After nrnivmodl, contents of $(pwd):"
             ls
           done
+      - name: Run MOD smoke tests (macOS)
+        run: |
+          python -m pip install pytest
+          pytest -q tests/test_mods_smoke.py
 
 
   # ========================
