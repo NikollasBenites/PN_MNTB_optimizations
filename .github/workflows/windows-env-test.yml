@@ -40,6 +40,7 @@ jobs:
           print('Matplotlib:', matplotlib.__version__); \
           print('Pandas:', pandas.__version__)"
 
-      - name: Test NEURON import
+      - name: Install NEURON via pip
         run: |
-          python -c "import neuron; print('NEURON imported successfully, version:', neuron.__version__)"
+          pip install neuron==8.2.6
+      
