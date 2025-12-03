@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main, master ]
 
+# Use a login bash shell everywhere so that `setup-miniconda` activation works.
+defaults:
+  run:
+    shell: bash -l {0}
+
 jobs:
   # ========================
   # macOS: test mac env + NEURON
@@ -30,10 +35,10 @@ jobs:
 
       - name: Show Python and system info (macOS)
         run: |
+          which python
           python -V
           python -c "import platform; print('Platform:', platform.platform())"
           python -c "import sys; print('Python executable:', sys.executable)"
-
 
       - name: Test core scientific stack (macOS)
         run: |
@@ -70,6 +75,7 @@ jobs:
 
       - name: Show Python and system info (Windows)
         run: |
+          which python
           python -V
           python -c "import platform; print('Platform:', platform.platform())"
           python -c "import sys; print('Python executable:', sys.executable)"
