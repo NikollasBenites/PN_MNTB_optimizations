@@ -74,8 +74,10 @@ In Windows OS you will generate a file nrnmech.dll in the Root.
 
 The optimizers used from SciPy library were ```differential_evolution``` and ```minimize```. You can find the 
 documentation on:
+``
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html
+``
 
 The CSV folder contains the averaged params from iMNTB and TeNT cells (avg_iMNTB_transposed.csv & avg_TeNT_transposed.csv) 
 and also the last params used on the simulation for each cell. The data folder contains action potential sweeps used to be 
