@@ -1,14 +1,14 @@
 import os
 from neuron import h
 
-# Mechanisms from your .mod files
+# Mechanisms from your .mod files (exact SUFFIX names, case-sensitive)
 MECHANISMS = [
-    "NaCh_nmb",
-    "KHT_nmb",
-    "KLT_nmb",
-    "KA",
-    "Ih_nmb",
-    "Leak",
+    "NaCh_nmb",    # nach_nmb.mod
+    "HT_dth_nmb",  # kht_dth_nmb.mod
+    "LT_dth",      # klt_dth.mod
+    "ka",          # ka.mod
+    "IH_nmb",      # ih_nmb.mod
+    "leak",        # leak.mod
 ]
 
 
@@ -18,9 +18,6 @@ def test_load_and_insert_all_mechanisms():
 
       1. Load ONE compiled NEURON mechanism library from optimization/mod.
       2. Try inserting each known mechanism SUFFIX into a test Section.
-
-    We only need to load one libnrnmech; compiling in the other folder is
-    already checked by the 'Compile MOD files' step.
     """
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     print("Repo root:", repo_root)
@@ -28,10 +25,6 @@ def test_load_and_insert_all_mechanisms():
     # Candidate locations for the library produced by:
     #   cd optimization/mod
     #   nrnivmodl
-    #
-    # From the CI log we know NEURON is creating:
-    #   optimization/mod/arm64/libnrnmech.dylib
-    #   optimization/mod/arm64/.libs/libnrnmech.so
     candidates = [
         os.path.join(repo_root, "optimization", "mod", "arm64", "libnrnmech.dylib"),
         os.path.join(repo_root, "optimization", "mod", "arm64", ".libs", "libnrnmech.so"),
