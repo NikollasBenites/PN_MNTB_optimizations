@@ -16,6 +16,8 @@ PN_MNTB_modeling/
 │
 ├── results/
 │
+├── tests/
+│
 ├── README.md
 │
 ├── environment_windows.yml
@@ -23,6 +25,13 @@ PN_MNTB_modeling/
 │
 └── .gitignore
 ```
+
+The `tests` folder contains one file called `test_mods_smoke.py`. This file is necessary to test if the mod files are
+properly set up. The `results\test` folder is the folder where the testing results should be when you are testing the
+scripts. **The last results for the paper are in `results` folder, separated specifically by experiment type (explained
+bellow)
+
+
 ---
 ## 🛠 Setup Instructions
 
