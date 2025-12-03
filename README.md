@@ -44,6 +44,10 @@ directory.
 git clone git@github.com:NikollasBenites/PN_MNTB_optimizations
 cd PN_MNTB_modeling
 ```
+
+You can also download all the files using the version v0.0.0 under Releases, or just download the .zip folder under **Code**
+
+
 ### 2. Create the Conda Environment
 
 There are two envs files: one for mac and other for windows. Use the file that match your OS. Open a terminal on the
