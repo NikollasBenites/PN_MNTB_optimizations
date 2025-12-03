@@ -1,0 +1,87 @@
+name: Test NEURON Environments (macOS + Windows)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  # ========================
+  # macOS: test mac env + NEURON
+  # ========================
+  test-macos-env:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Miniconda and create macOS environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          # MUST match the name inside environment_mac.yml
+          activate-environment: neuron_env
+          environment-file: environment_mac.yml
+          auto-activate-base: false
+          python-version: "3.10"
+          channels: conda-forge, defaults
+          use-mamba: true
+
+      - name: Show Python and system info (macOS)
+        run: |
+          python -V
+          python -c "import platform; print('Platform:', platform.platform())"
+          python -c "import sys; print('Python executable:', sys.executable)"
+
+      # If you later add NEURON to environment_mac.yml under pip:, you can delete this step.
+      - name: Install NEURON via pip (macOS)
+        run: |
+          pip install "neuron==8.2.6"
+
+      - name: Test core scientific stack (macOS)
+        run: |
+          python -c "import numpy, scipy, matplotlib, pandas; \
+          print('NumPy:', numpy.__version__); \
+          print('SciPy:', scipy.__version__); \
+          print('Matplotlib:', matplotlib.__version__); \
+          print('Pandas:', pandas.__version__)"
+
+      - name: Test NEURON import (macOS)
+        run: |
+          python -c "import neuron; print('NEURON (macOS) imported successfully, version:', neuron.__version__)"
+
+  # ========================
+  # Windows: test windows env (NO NEURON)
+  # ========================
+  test-windows-env:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Miniconda and create Windows environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          # MUST match the name inside environment_windows.yml
+          activate-environment: neuron_env
+          environment-file: environment_windows.yml
+          auto-activate-base: false
+          python-version: "3.10"
+          channels: conda-forge, defaults
+          use-mamba: true
+
+      - name: Show Python and system info (Windows)
+        run: |
+          python -V
+          python -c "import platform; print('Platform:', platform.platform())"
+          python -c "import sys; print('Python executable:', sys.executable)"
+
+      - name: Test core scientific stack (Windows)
+        run: |
+          python -c "import numpy, scipy, matplotlib, pandas; \
+          print('NumPy:', numpy.__version__); \
+          print('SciPy:', scipy.__version__); \
+          print('Matplotlib:', matplotlib.__version__); \
+          print('Pandas:', pandas.__version__)"
