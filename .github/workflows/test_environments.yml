@@ -8,7 +8,7 @@ on:
 
 jobs:
   # ========================
-  # macOS: uses environment_mac.yml (includes neuron==8.2.6)
+  # macOS: test mac env + NEURON
   # ========================
   test-macos-env:
     runs-on: macos-latest
@@ -34,6 +34,7 @@ jobs:
           python -c "import platform; print('Platform:', platform.platform())"
           python -c "import sys; print('Python executable:', sys.executable)"
 
+
       - name: Test core scientific stack (macOS)
         run: |
           python -c "import numpy, scipy, matplotlib, pandas; \
@@ -47,7 +48,7 @@ jobs:
           python -c "import neuron; print('NEURON (macOS) imported successfully, version:', neuron.__version__)"
 
   # ========================
-  # Windows: uses environment_windows.yml (NO NEURON)
+  # Windows: test windows env (NO NEURON)
   # ========================
   test-windows-env:
     runs-on: windows-latest
