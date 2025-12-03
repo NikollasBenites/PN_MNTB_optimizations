@@ -97,13 +97,15 @@ Essential functions:
 ```MNTB_PN_myFunctions.py```
 
 ## Steady-state fitting (FIT FIRST STAGE): 
-Steady-state fitting in a batch: 
+Steady-state fitting in a batch.
+
+### WE RECOMMEND TO USE THESE FILES
 
 ```batch_fit_passive_v2_TeNT.py``` 
 
 ```batch_fit_passive_v2_iMNTB.py```
 
-RECOMMENDED TO USE.
+
 Those files work calling the function described bellow and fitting all the files proposed. You just need to run the 
 script. All the files will be fitted and save at ```~/PN_MNTB_modeling/results/test/passive_fits``` separated by folders.
 The script last about ```20-30 minutes```.
