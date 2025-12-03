@@ -35,7 +35,7 @@ dependencies:
 
   # --- Install these from pip to avoid conda conflicts ---
   - pip:
-      - neuron==8.2.6
+      - neuron==9.0.1
       - efel==5.7.16
       - deap==1.4.2
       - scoop==0.7.2.0
