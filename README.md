@@ -82,8 +82,9 @@ and also the last params used on the simulation for each cell. The data folder c
 optimized and fitted. Also contains the VI used to fit the "passive" conductance. The figures folder contains the 3D graphs 
 showing the behavior of simulated 2500 neurons with slightly changes in conductance values. Also contains the bar plots 
 comparing the optimized values including the stats. 
+
 ---
-# The optimization folder contains all the core codes for the paper: 
+## The optimization folder contains all the core codes for the paper: 
 ---
 ## PN file: 
 
