@@ -51,6 +51,36 @@ jobs:
       - name: Test NEURON import (macOS)
         run: |
           python -c "import neuron; print('NEURON (macOS) imported successfully, version:', neuron.__version__)"
+      
+      - name: Compile MOD files (macOS)
+        run: |
+          set -e  # fail on first error
+          echo "Repo root:"
+          pwd
+          ls
+
+          # List of MOD folders relative to the repo root
+          MOD_DIRS=(
+            "optimization/mod"
+            "optimization/3D_and_bar_graphs/mod"
+          )
+
+          for MODPATH in "${MOD_DIRS[@]}"; do
+            echo "-----------------------------------------"
+            echo "Compiling MODs in: $MODPATH"
+            echo "-----------------------------------------"
+            cd "$GITHUB_WORKSPACE/$MODPATH"
+
+            echo "Current dir: $(pwd)"
+            ls
+
+            # Compile all .mod files in this directory
+            nrnivmodl
+
+            echo "After nrnivmodl, contents of $(pwd):"
+            ls
+          done
+
 
   # ========================
   # Windows: test windows env (NO NEURON)
