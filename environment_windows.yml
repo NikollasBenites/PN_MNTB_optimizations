@@ -45,3 +45,4 @@ dependencies:
   # (pip section empty on purpose — avoid pip for NumPy/SciPy on Windows)
   - pip:
       - find-libpython==0.4.0
+      - neuron==8.2.6
