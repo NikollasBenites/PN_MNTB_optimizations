@@ -39,7 +39,7 @@ cd PN_MNTB_modeling
 
 There are two envs files: one for mac and other for windows. Use the file that match your OS. Open a terminal on the
 directory the .yml files are. We tested the simulations exhaustively on MacOS. But, we also tested on Windows. We used 
-PyCharm as our IDE.
+*PyCharm* as our IDE.
 
 ``` bash
 conda env create -f environment_mac.yml
@@ -49,7 +49,21 @@ conda activate neuron_env
 
 #### MAKE SURE YOU HAVE CONDA INSTALLED AND YOUR INTERPRETER IS SET AS neuro_env
 
-If anything don't work, you can contact us anytime.
+### ⚠️ macOS Users: You May Need Xcode Command Line Tools (CLT)
+
+If you are using macOS, NEURON requires a C/C++ compiler to build the `.mod` files.  
+macOS does **not** install compilers by default.
+
+You *do not* need the full Xcode application, but you do need the **Xcode Command Line Tools** (CLT).
+
+You will be automatically prompted to install CLT if you try to compile mechanisms without it.  
+If not, you can install it manually:
+
+```bash
+xcode-select --install
+```
+
+**If anything don't work, you can contact us anytime.**
 
 ### 3. Compile NEURON (8.2.6) Mechanisms
 
