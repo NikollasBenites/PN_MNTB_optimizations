@@ -85,7 +85,6 @@ comparing the optimized values including the stats.
 ---
 # The optimization folder contains all the core codes for the paper: 
 ---
----
 ## PN file: 
 
 ```MNTB_PN_fit.py.```
