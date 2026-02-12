@@ -6,10 +6,7 @@ def nstomho(x, somaarea):
 
 class MNTB:
     def __init__(self, gid, somaarea, erev, gleak, ena, gna, gh, gka, gklt, gkht,ek,
-                 cam, kam, cbm, kbm):#,
-                 # cah, kah, cbh, kbh,
-                 # can, kan, cbn, kbn,
-                 # cap, kap, cbp, kbp):
+                 cam, kam, cbm, kbm):
         self._gid = gid
         self.somaarea = somaarea
         self.erev = erev
@@ -27,19 +24,6 @@ class MNTB:
         self.kam = kam
         self.cbm = cbm
         self.kbm = kbm
-        # self.cah = cah
-        # self.kah = kah
-        # self.cbh = cbh
-        # self.kbh = kbh
-        # self.can = can
-        # self.kan = kan
-        # self.cbn = cbn
-        # self.kbn = kbn
-        # self.cap = cap
-        # self.kap = kap
-        # self.cbp = cbp
-        # self.kbp = kbp
-
         self._setup_morphology()
         self._setup_biophysics()
 
@@ -69,24 +53,10 @@ class MNTB:
             seg.NaCh_nmb.kam = self.kam
             seg.NaCh_nmb.cbm = self.cbm
             seg.NaCh_nmb.kbm = self.kbm
-            # seg.NaCh_nmb.cah = self.cah
-            # seg.NaCh_nmb.kah = self.kah
-            # seg.NaCh_nmb.cbh = self.cbh
-            # seg.NaCh_nmb.kbh = self.kbh
-
             seg.IH_nmb.ghbar = nstomho(self.gh, self.somaarea)
             seg.ka.gkabar = nstomho(self.gka, self.somaarea)
             seg.LT_dth.gkltbar = nstomho(self.gklt, self.somaarea)
-
             seg.HT_dth_nmb.gkhtbar = nstomho(self.gkht, self.somaarea)
-            # seg.HT_dth_nmb.can = self.can
-            # seg.HT_dth_nmb.kan = self.kan
-            # seg.HT_dth_nmb.cbn = self.cbn
-            # seg.HT_dth_nmb.kbn = self.kbn
-            # seg.HT_dth_nmb.cap = self.cap
-            # seg.HT_dth_nmb.kap = self.kap
-            # seg.HT_dth_nmb.cbp = self.cbp
-            # seg.HT_dth_nmb.kbp = self.kbp
 
     def __repr__(self):
         return 'MNTB [{}]'.format(self._gid)
