@@ -30,6 +30,8 @@ class MNTB:
         self.kah = kah
         self.cbh = cbh
         self.kbh = kbh
+
+
         self._setup_morphology()
         self._setup_biophysics()
 
@@ -69,6 +71,7 @@ class MNTB:
             seg.LT_dth.gkltbar = nstomho(self.gklt, self.somaarea)
 
             seg.HT_dth_nmb.gkhtbar = nstomho(self.gkht, self.somaarea)
+
 
     def __repr__(self):
         return 'MNTB [{}]'.format(self._gid)

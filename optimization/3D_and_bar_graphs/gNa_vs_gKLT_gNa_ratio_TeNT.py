@@ -15,7 +15,7 @@ h.celsius = 35
 
 # === Load fitted parameters ===
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-param_file_path = os.path.join(os.path.dirname(__file__),"..","..","CSV", "avg_iMNTB_transposed.csv")
+param_file_path = os.path.join(os.path.dirname(__file__),"..","..","CSV", "avg_TeNT_transposed.csv")
 filename = "gNa_vs_gKLT_gNa_ratio_TeNT_average"
 if os.path.exists(param_file_path):
     params_df = pd.read_csv(param_file_path)

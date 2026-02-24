@@ -57,7 +57,9 @@ class MNTB:
             seg.IH_nmb.ghbar = nstomho(self.gh, self.somaarea)
             seg.ka.gkabar = nstomho(self.gka, self.somaarea)
             seg.LT_dth.gkltbar = nstomho(self.gklt, self.somaarea)
+
             seg.HT_dth_nmb.gkhtbar = nstomho(self.gkht, self.somaarea)
+
 
     def __repr__(self):
         return 'MNTB [{}]'.format(self._gid)
