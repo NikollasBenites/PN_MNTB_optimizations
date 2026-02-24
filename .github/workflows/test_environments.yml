@@ -51,7 +51,11 @@ jobs:
       - name: Test NEURON import (macOS)
         run: |
           python -c "import neuron; print('NEURON (macOS) imported successfully, version:', neuron.__version__)"
-      
+
+      - name: Ensure pkg_resources exists (macOS)
+        run: |
+          python -m pip install --upgrade setuptools wheel  
+
       - name: Compile MOD files (macOS)
         run: |
           set -e  # fail on first error
