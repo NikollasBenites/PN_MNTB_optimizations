@@ -79,8 +79,7 @@ jobs:
             ls
 
             # Compile all .mod files in this directory
-            python -m neuron.rxd.nrnivmodl
-
+            python "$(command -v nrnivmodl)"
             echo "After nrnivmodl, contents of $(pwd):"
             ls
           done
