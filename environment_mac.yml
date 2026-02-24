@@ -37,6 +37,8 @@ dependencies:
 
   # --- Install these from pip to avoid conda conflicts ---
   - pip:
+      - setuptools
+      - wheel
       - neuron==8.2.6
       - efel==5.7.16
       - deap==1.4.2
