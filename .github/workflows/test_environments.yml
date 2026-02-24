@@ -79,6 +79,11 @@ jobs:
             ls
 
             # Compile all .mod files in this directory
+            which python
+            python -c "import sys; print(sys.executable)"
+            which nrnivmodl
+            head -n 1 "$(command -v nrnivmodl)" || true
+            python -c "import pkg_resources; print('pkg_resources OK')"
             python "$(command -v nrnivmodl)"
             echo "After nrnivmodl, contents of $(pwd):"
             ls
