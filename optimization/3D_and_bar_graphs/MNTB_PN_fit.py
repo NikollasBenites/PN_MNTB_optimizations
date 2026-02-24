@@ -7,6 +7,7 @@ def nstomho(x, somaarea):
 class MNTB:
     def __init__(self, gid, somaarea, erev, gleak, ena, gna, gh, gka, gklt, gkht,ek,
                  cam, kam, cbm, kbm):
+
         self._gid = gid
         self.somaarea = somaarea
         self.erev = erev
