@@ -52,9 +52,9 @@ jobs:
         run: |
           python -c "import neuron; print('NEURON (macOS) imported successfully, version:', neuron.__version__)"
 
-      - name: Ensure pkg_resources exists (macOS)
+      - name: Force compatible setuptools (macOS)
         run: |
-          python -m pip install --upgrade setuptools wheel  
+          python -m pip install "setuptools<70" wheel --upgrade 
 
       - name: Compile MOD files (macOS)
         run: |
